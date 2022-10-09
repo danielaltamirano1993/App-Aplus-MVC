@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<ruleset name="Mess Detector">
+    <!-- cleancode -->
+    <rule ref="rulesets/cleancode.xml">
+        <exclude name="BooleanArgumentFlag"/>
+        <exclude name="StaticAccess"/>
+    </rule>
+    <!-- codesize -->
+    <rule ref="rulesets/codesize.xml/TooManyPublicMethods">
+        <properties>
+            <property name="maxmethods" value="30"/>
+        </properties>
+    </rule>
+    <!-- controversial -->
+    <rule ref="rulesets/controversial.xml">
+        <exclude name="CamelCasePropertyName"/>
+        <exclude name="Superglobals"/>
+    </rule>
+    <!-- design -->
+    <rule ref="rulesets/design.xml/CouplingBetweenObjects">
+        <properties>
+            <property name="maximum" value="45"/>
+        </properties>
+    </rule>
+    <!-- naming -->
+    <rule ref="rulesets/naming.xml/ShortVariable">
+        <properties>
+            <property name="minimum" value="2"/>
+        </properties>
+    </rule>
+    <!-- unusedcode -->
+    <rule ref="rulesets/unusedcode.xml">
+        <exclude name="UnusedFormalParameter"/>
+    </rule>
+</ruleset>
